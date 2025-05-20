@@ -6,6 +6,10 @@ const app = express();
 // Middleware to parse JSON bodies
 app.use(express.json());
 
+app.get("/", async (req,res)=>{
+res.json({"hello":"world"})
+})
+
 // POST endpoint to query device information
 app.post("/device", async (req, res) => {
   try {
